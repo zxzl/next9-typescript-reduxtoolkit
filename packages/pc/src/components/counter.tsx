@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
+import { RootState } from 'src/store'
 import { incrementCount, decrementCount, resetCount } from 'src/store/features/clockSlice';
 
 export default () => {
-  const count = useSelector((state) => state.clock.count);
+  const count = useSelector((state: RootState) => state.clock.count);
   const dispatch = useDispatch();
 
   return (

@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { Dispatch } from 'redux'
 
 interface TickPayload {
   ts: number
@@ -36,12 +37,12 @@ export const { tick, incrementCount, decrementCount, resetCount } = clockSlice.a
 
 export default clockSlice.reducer
 
-export const serverRenderClock = (isServer) => (dispatch) => {
+export const serverRenderClock = (isServer:boolean) => (dispatch: Dispatch) => {
   dispatch(tick({
   light: !isServer,
   ts: Date.now()
 }))};
 
-export const startClock = (dispatch) => setInterval(() => {
+export const startClock = (dispatch: Dispatch) => setInterval(() => {
   dispatch(tick({ light: true, ts: Date.now() }))
 }, 1000);
