@@ -45,5 +45,3 @@ export const serverRenderClock = (isServer) => (dispatch) => {
 export const startClock = (dispatch) => setInterval(() => {
   dispatch(tick({ light: true, ts: Date.now() }))
 }, 1000);
-
-

@@ -15,7 +15,6 @@ class Home extends React.Component<Props> {
 
   static getInitialProps(props) {
     const { reduxStore, req } = props
-    console.debug('home-getInitialProps')
     const isServer = !!req
     reduxStore.dispatch(serverRenderClock(isServer))
     return {}
