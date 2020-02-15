@@ -23,6 +23,7 @@ export default (App) => class AppWithRedux extends React.Component {
   static async getInitialProps(appContext) {
     // Get or Create the store with `undefined` as initialState
     // This allows you to set a custom default initialState
+    console.debug('hoc-getInitialProps')
     const reduxStore = getOrCreateStore();
 
     // Provide the store to getInitialProps of pages
@@ -40,11 +41,13 @@ export default (App) => class AppWithRedux extends React.Component {
   }
 
   constructor(props) {
+    console.debug('hoc-constructor')
     super(props);
     this.reduxStore = getOrCreateStore(props.initialReduxState);
   }
 
   render() {
+    console.debug('hoc-render')
     return <App {...this.props} reduxStore={this.reduxStore} />;
   }
 };
