@@ -32,7 +32,9 @@ class Home extends React.Component<Props> {
   render() {
     return (<>
     <h1>Hello world!</h1>
-    <Link href="/about">about</Link>
+    <Link href="/about">
+      <a>about</a>
+      </Link>
      <Examples />
      </>
     )
