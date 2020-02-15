@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import Link from 'next/link';
 import { Dispatch} from 'redux'
 
-import { startClock, serverRenderClock } from '../store/features/clockSlice'
-import Examples from '../components/examples'
+import { startClock, serverRenderClock } from 'src/store/features/clockSlice'
+import Examples from 'src/components/examples'
 
 interface Props {
   dispatch: Dispatch

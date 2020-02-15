@@ -2,7 +2,7 @@ import App from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import { RootState } from '../store'
+import { RootState } from '../src/store'
 import withReduxStore from '../lib/with-redux-store';
 
 interface Props   {

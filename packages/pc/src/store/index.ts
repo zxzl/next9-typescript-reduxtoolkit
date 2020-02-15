@@ -1,6 +1,6 @@
 import { configureStore, Action, combineReducers } from "@reduxjs/toolkit";
 import { ThunkAction } from 'redux-thunk'
-import clockReducer from './features/clockSlice'
+import clockReducer from 'src/store/features/clockSlice'
 
 const exampleInitialState = {
   clock: {

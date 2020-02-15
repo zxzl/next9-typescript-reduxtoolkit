@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
-import Clock from './clock'
-import Counter from './counter'
+import Clock from 'src/components/clock'
+import Counter from 'src/components/counter'
 
 export default () => {
   const lastUpdate = useSelector(state => state.clock.lastUpdate)

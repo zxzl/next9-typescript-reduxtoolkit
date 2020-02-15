@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Counter from '../components/counter'
+import Counter from 'src/components/counter'
 
 const About = () => (
   <>
