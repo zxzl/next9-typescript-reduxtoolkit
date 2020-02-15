@@ -20,6 +20,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "build:docker": "docker build -t next-ts-reduxtoolkit .",
+    "start": "next start",
+    "start:docker": "docker run -it --rm -p 3000:3000 next-ts-reduxtoolkit"
   }
 }
